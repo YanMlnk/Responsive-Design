@@ -1,12 +1,9 @@
 body {
     background-color: black;
-    max-width:100%; 
-    display: flex; 
-    flex-direction: column; 
-    
-    align-content: center;
-    margin: auto;
-
+    display: flex;
+    flex-direction: column;
+    margin-right: 10rem;
+    margin-left: 10rem;
 }
 
 nav {
@@ -14,12 +11,8 @@ nav {
     width: 100%;
     height: 36px;  
     align-items: center;
-    justify-content: space-around;
-}
-
-.logo-png {
-    display: flex;
-    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: row;
 }
 
 .nav-links {
@@ -33,9 +26,13 @@ nav {
     display:flex;
     flex-flow: row wrap;
     justify-content: flex-end;
-    align-content: center;
+    align-items: center;
     gap: 2rem;
 
+}
+
+.nav-item {
+    display: inline;
 }
 
 main{
@@ -52,8 +49,8 @@ main{
     align-items: center;
     flex-direction: column;
 }
+
 .main-title {
-    
     height: 102px;
     font-family: 'Poppins', sans-serif;
     font-style: normal;
@@ -65,7 +62,6 @@ main{
     }
 
 .text-box {
-    
     display: flex;
     align-content: center;
     justify-content: space-around;
@@ -73,7 +69,6 @@ main{
 }
 
 .main-text {
-
     font-family: 'Source Sans Pro', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -83,9 +78,45 @@ main{
     color: #FFFFFF;
 }
 
-.img-japan {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: space-around;
+.japan-png {
+    width: 100%;
+    height: auto;
+}
+
+.nav-item {
+    display: inline;
+}
+
+.nav-dots {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        margin-right: 5rem;
+        margin-left: 5rem;
+    }
+}
+
+@media screen and (max-width: 320px){ 
+    body {
+        margin-right: 2.5rem;
+        margin-left: 2.5rem;
+    }
+    .nav-item {
+        display: none;
+    }
+    .nav-dots {
+        display: inline;
+    }
+
+    .title-box {
+        font-size: 36px;
+        line-height: 40px;
+    }
+
+    .text-box {
+        font-size: 12px;
+        line-height: 18px;
+    }
 }
